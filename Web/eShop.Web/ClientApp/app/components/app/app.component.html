@@ -1,10 +1,70 @@
 <div class='container-fluid'>
     <div class='row'>
         <div class='col-sm-3'>
-            <nav-menu></nav-menu>
+
+            <div class="container">
+
+                <!-- Static navbar -->
+                <nav class="navbar navbar-default">
+                    <div class="container-fluid">
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                                <span class="icon-bar"></span>
+                            </button>
+                            <a class="navbar-brand" [routerLink]="['/home']">Project name</a>
+                        </div>
+                        <div id="navbar" class="navbar-collapse collapse">
+                            <ul class="nav navbar-nav">
+                                <li [routerLinkActive]="['link-active']" class="active">
+                                    <a [routerLink]="['/home']">
+                                        <span class='glyphicon glyphicon-home'></span> Home
+                                    </a>
+                                </li>
+                                <li [routerLinkActive]="['link-active']">
+                                    <a [routerLink]="['/counter']">
+                                        <span class='glyphicon glyphicon-education'></span> Counter
+                                    </a>
+                                </li>
+                                <li [routerLinkActive]="['link-active']">
+                                    <a [routerLink]="['/fetch-data']">
+                                        <span class='glyphicon glyphicon-th-list'></span> Fetch data
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                                    <ul class="dropdown-menu">
+                                        <li [routerLinkActive]="['link-active']"><a [routerLink]="['/allproducts']">All products</a></li>
+                                        <li [routerLinkActive]="['link-active']"><a [routerLink]="['/newproducts']">New additions</a></li>
+                                        <li [routerLinkActive]="['link-active']"><a [routerLink]="['/forsale']">Sale!</a></li>
+                                        <li role="separator" class="divider"></li>
+                                        <li class="dropdown-header">Nav header</li>
+                                        <li [routerLinkActive]="['link-active']"><a [routerLink]="['/men']">Men's clothing</a></li>
+                                        <li [routerLinkActive]="['link-active']"><a [routerLink]="['/women']">Women's clothing</a></li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul class="nav navbar-nav navbar-right">
+                               
+                                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/login']">Login</a></li>
+                                <li [routerLinkActive]="['link-active']"><a [routerLink]="['/register']">Register</a></li>
+                            </ul>
+                        </div><!--/.nav-collapse -->
+                    </div><!--/.container-fluid -->
+                </nav>
+
+
+                <div class='col-sm-9 body-content jumbotron'>
+                    <router-outlet></router-outlet>
+                </div>
+
+            </div> <!-- /container -->
+
+
         </div>
-        <div class='col-sm-9 body-content'>
-            <router-outlet></router-outlet>
-        </div>
+
+       
     </div>
 </div>
