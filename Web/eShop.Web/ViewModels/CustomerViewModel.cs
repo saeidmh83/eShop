@@ -1,6 +1,6 @@
 ﻿
 
-using FluentValidation;
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 
-namespace QuickApp.ViewModels
+namespace eShop.ViewModels
 {
     public class CustomerViewModel
     {
@@ -24,14 +24,5 @@ namespace QuickApp.ViewModels
     }
 
 
-
-
-    public class CustomerViewModelValidator : AbstractValidator<CustomerViewModel>
-    {
-        public CustomerViewModelValidator()
-        {
-            RuleFor(register => register.Name).NotEmpty().WithMessage("Customer name cannot be empty");
-            RuleFor(register => register.Gender).NotEmpty().WithMessage("Gender cannot be empty");
-        }
-    }
+    
 }

@@ -1,4 +1,4 @@
-﻿using FluentValidation;
+﻿
 using Microsoft.AspNetCore.Identity;
 using System;
 using System.Collections.Generic;
@@ -6,7 +6,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 
 
-namespace QuickApp.ViewModels
+namespace eShop.ViewModels
 {
     public class UserViewModel
     {

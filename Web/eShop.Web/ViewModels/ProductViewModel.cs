@@ -4,7 +4,7 @@ using System;
 using System.Linq;
 
 
-namespace QuickApp.ViewModels
+namespace eShop.ViewModels
 {
     public class ProductViewModel
     {

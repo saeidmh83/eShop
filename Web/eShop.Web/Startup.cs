@@ -23,24 +23,17 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using Newtonsoft.Json;
-using QuickApp.ViewModels;
+using eShop.ViewModels;
 
 namespace eShop.Web
 {
     public class Startup
     {
         private readonly IConfiguration configuration;
-        private IHostingEnvironment _hostingEnvironment;
 
-        public Startup(IHostingEnvironment env)
+        public Startup(IConfiguration configuration)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(env.ContentRootPath)
-                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
-                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true)
-                .AddEnvironmentVariables();
-            this.configuration = builder.Build();
-            _hostingEnvironment = env;
+            this.configuration = configuration;
         }
 
         // This method gets called by the runtime. Use this method to add services to the container.
@@ -48,7 +41,7 @@ namespace eShop.Web
         {
             services.AddDbContext<ApplicationDbContext>(options =>
             {
-                options.UseSqlServer(this.configuration["Data:DefaultConnection:ConnectionString"], b => b.MigrationsAssembly("QuickApp"));
+                options.UseSqlServer(this.configuration["ConnectionStrings:DefaultConnection"], b=>b.MigrationsAssembly("eShop.Data"));
                 options.UseOpenIddict();
             });
 

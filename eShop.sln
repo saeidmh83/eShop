@@ -21,9 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{CE2B8B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Common", "Common\eShop.Common\eShop.Common.csproj", "{995FDE08-7AF9-44D0-BF24-592663D258B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Web.Infrastructure", "Web\eShop.Web.Infrastructure\eShop.Web.Infrastructure.csproj", "{09005598-7A16-4624-9D92-575244646874}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Web.Infrastructure", "Web\eShop.Web.Infrastructure\eShop.Web.Infrastructure.csproj", "{09005598-7A16-4624-9D92-575244646874}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eShop.Services.Messaging", "Services\eShop.Services.Messaging\eShop.Services.Messaging.csproj", "{89EE767B-D762-49C9-B01A-7FBDD30DA48C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "eShop.Services.Messaging", "Services\eShop.Services.Messaging\eShop.Services.Messaging.csproj", "{89EE767B-D762-49C9-B01A-7FBDD30DA48C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
